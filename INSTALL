@@ -1,0 +1,26 @@
+The project is a code base, and has no external dependencies.
+You can place source files from the code base of the library 
+to your Erlang project and use further according to examples 
+found in dfbcli_tests.erl
+
+The library itself needs 3 files: 
+  dfbcli.erl - api calls/wrappers
+  dfbcli.hrl - defines
+  json2.erl  - 3rd party json library
+
+Source file dfbcli_tests.erl contains exhaustive samples for
+each API
+
+After inserting source codes into your project you should add
+to your Erlang/OTP application dependency from inets 
+application. The following can be an example of your app file:
+
+  {application, YOUR_APP,
+   [{description, "..."},
+    {vsn, "1"},
+    {registered, []},
+    {applications, [kernel, stdlib, sasl, inets]},
+    {mod, {YOUR_APP_MODULE, []}},
+    {env, []},
+    {modules,[YOUR_MODULE_LIST]}
+   ]}.
