@@ -139,3 +139,5 @@ In this example `Props` is a list (maybe empty) of optional values to pass to a 
 ### More examples
 
 Please see dfbcli_tests.erl for more examples.
+
+-Initial commit by Vasiliy Pupkin-
